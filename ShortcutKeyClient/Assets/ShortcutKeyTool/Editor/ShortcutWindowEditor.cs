@@ -10,10 +10,18 @@ using UnityEngine.UI;
 
 public class ShortcutWindowEditor : EditorWindow
 {
-	private static string shortcutPath = "";
-	private static string shortcutSavePath="";
 	private static string tipsLabelText = "* %->commond #->shift &->ctrl _a->keyboard[A]";
 	
+	private static string ShortcutPath 
+	{
+		get { return Application.dataPath + "/ShortcutKeyTool/Editor/ShortcutKeyEditor.cs";}
+	}
+
+	private static string ShortcutSavePath 
+	{
+		get { return Application.dataPath + "/ShortcutKeyTool/Res/ShortcutKeyData.xml";}
+	}
+
 	[MenuItem("LLL/Tools/ShortcutWindow _o",false,3)]
 	static void SetUpShortcutWindow()
 	{
@@ -29,11 +37,9 @@ public class ShortcutWindowEditor : EditorWindow
 	
 	void Awake()
 	{
-		shortcutPath = Application.dataPath + "/ShortcutKeyTool/Editor/ShortcutKeyEditor.cs";
-		shortcutSavePath = Application.dataPath + "/ShortcutKeyTool/Res/ShortcutKeyData.xml";
 		ski=new ShortcutKeyItem();
 		mSkiList = new List<ShortcutKeyItem> ();
-		mSkiList = LoadShortcutKeyFromFile (shortcutSavePath);
+		mSkiList = LoadShortcutKeyFromFile (ShortcutSavePath);
 		scrollPositon = new Vector2(300, 500);
 	}
 
@@ -77,8 +83,8 @@ public class ShortcutWindowEditor : EditorWindow
 		{
 			//TODO: save to disk!
 			//save to script
-			SaveShortcutKey2File (shortcutSavePath,mSkiList);
-			SaveShortcutKey2EditorCode(shortcutPath,mSkiList);
+			SaveShortcutKey2File (ShortcutSavePath,mSkiList);
+			SaveShortcutKey2EditorCode(ShortcutPath,mSkiList);
 			Debug.Log("Save!");
 		}
 		EditorGUILayout.EndHorizontal();
@@ -111,11 +117,14 @@ public class ShortcutWindowEditor : EditorWindow
 		EditorGUILayout.EndHorizontal();
 	}
 	
-	private void SaveShortcutKey2EditorCode(string path,List<ShortcutKeyItem> skiList)
+	private void SaveShortcutKey2EditorCode(string strFilePath,List<ShortcutKeyItem> skiList)
 	{
-		Debug.Log(path);
-		string strDlg = path.Substring(path.LastIndexOf('/')+1).Split('.')[0];
-		string strFilePath = path;
+		if (!File.Exists(strFilePath))
+		{
+			FileStream fl = File.Create(strFilePath);
+			fl.Close();
+		}
+		string strDlg = strFilePath.Substring(strFilePath.LastIndexOf('/')+1).Split('.')[0];
 		if (File.Exists(strFilePath) == true)
 		{
 			StreamWriter sw = new StreamWriter(strFilePath, false, Encoding.UTF8);
@@ -158,9 +167,11 @@ public class ShortcutWindowEditor : EditorWindow
 
 	private void SaveShortcutKey2File(string savePath,List<ShortcutKeyItem> list)
 	{
-		FileStream fs=null;
-		if (!File.Exists (savePath))
-			fs = File.Create (savePath);
+		if (!File.Exists(savePath))
+		{
+			FileStream fl = File.Create(savePath);
+			fl.Close();
+		}
 		XmlDocument xml = new XmlDocument ();
 		XmlElement root = xml.CreateElement ("KeyData");
 		//创建子节点
@@ -189,7 +200,6 @@ public class ShortcutWindowEditor : EditorWindow
 		List<ShortcutKeyItem> itemList = new List<ShortcutKeyItem> ();
 		XmlDocument xml = new XmlDocument ();
 		xml.Load (savePath);
-		Debug.Log ("lalalallalal"+typeof(ShortcutKeyItem).Name);
 		XmlNodeList xnlList = xml.SelectSingleNode ("KeyData").ChildNodes;
 		string tn = "", sn = "";
 		for (int i = 0; i < xnlList.Count; i++) 
@@ -252,26 +262,3 @@ public class ShortcutKeyItem
 		ShortKeyName = _shortcutName;
 	}
 }
-//
-//[MenuItem("LLL/ShortcutKey/Player _p")]
-//static void ShortcutKey_ProjectSettingsPlayer()
-//{
-//EditorApplication.ExecuteMenuItem("Edit/Project Settings/Player");
-//}
-//	
-//[MenuItem("LLL/ShortcutKey/CreateFolder #f")]
-//static void ShortcutKey_CreateFolder()
-//{
-//EditorApplication.ExecuteMenuItem("Assets/Create/Folder");
-//}
-//[MenuItem("LLL/ShortcutKey/RevealInFinder #r")]
-//static void ShortcutKey_RevealInFinder()
-//{
-//EditorApplication.ExecuteMenuItem("Assets/Reveal in Finder");
-//}
-//	
-//[MenuItem("LLL/ShortcutKey/Open #o")]
-//static void ShortcutKey_Open()
-//{
-//EditorApplication.ExecuteMenuItem("Assets/Open");
-//}

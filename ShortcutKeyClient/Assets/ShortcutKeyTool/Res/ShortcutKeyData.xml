@@ -223,8 +223,7 @@
   </ShortcutKeyItem>
   <ShortcutKeyItem id="50">
     <TargetName>Assets/Create/Lens Flare</TargetName>
-    <ShortKeyName>
-    </ShortKeyName>
+    <ShortKeyName># </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="51">
     <TargetName>Assets/Create/Render Texture</TargetName>

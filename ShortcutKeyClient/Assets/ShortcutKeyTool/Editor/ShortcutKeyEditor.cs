@@ -296,7 +296,7 @@ public class ShortcutKeyEditor
 			EditorApplication.ExecuteMenuItem("Assets/Create/Material");
 		}
 
-		[MenuItem("LLL/ShortcutKey/LensFlare ")]
+		[MenuItem("LLL/ShortcutKey/LensFlare # ")]
 		static void ShortcutKey_AssetsCreateLensFlare()
 		{
 			EditorApplication.ExecuteMenuItem("Assets/Create/Lens Flare");
