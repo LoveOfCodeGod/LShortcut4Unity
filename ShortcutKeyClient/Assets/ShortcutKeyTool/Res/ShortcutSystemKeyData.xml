@@ -1,50 +1,238 @@
 <KeyData>
   <ShortcutKeyItem id="1">
-    <TargetName>Assets/Create/Folder</TargetName>
-    <ShortKeyName>Assets/Create/Folder</ShortKeyName>
+    <Path>File/New Scene</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="2">
-    <TargetName>Assets/Create/C# Script</TargetName>
-    <ShortKeyName>Assets/Create/C# Script</ShortKeyName>
+    <Path>File/Open Scene</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="3">
-    <TargetName>Assets/Create/Javascript</TargetName>
-    <ShortKeyName>Assets/Create/Javascript</ShortKeyName>
+    <Path>File/Save Scenes</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="4">
-    <TargetName>Assets/Create/Shader/Unlit Shader</TargetName>
-    <ShortKeyName>Assets/Create/Shader/Unlit Shader</ShortKeyName>
+    <Path>File/Save Scene as...</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="5">
-    <TargetName>Assets/Create/Testing/Editor Test C# Script</TargetName>
-    <ShortKeyName>Assets/Create/Testing/Editor Test C# Script</ShortKeyName>
+    <Path>File/New Project...</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="6">
-    <TargetName>Assets/Create/Scene</TargetName>
-    <ShortKeyName>Assets/Create/Scene</ShortKeyName>
+    <Path>File/Open Project...</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="7">
-    <TargetName>Assets/Create/Prefab</TargetName>
-    <ShortKeyName>Assets/Create/Prefab</ShortKeyName>
+    <Path>File/Save Project</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="8">
-    <TargetName>Assets/Create/Audio Mixer</TargetName>
-    <ShortKeyName>Assets/Create/Audio Mixer</ShortKeyName>
+    <Path>File/Build Settings...</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="9">
-    <TargetName>Assets/Create/Material</TargetName>
-    <ShortKeyName>Assets/Create/Material</ShortKeyName>
+    <Path>File/Build &amp; Run</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="10">
-    <TargetName>Assets/Create/Lens Flare</TargetName>
-    <ShortKeyName>Assets/Create/Lens Flare</ShortKeyName>
+    <Path>File/Close</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="11">
-    <TargetName>Assets/Create/Render Texture</TargetName>
-    <ShortKeyName>Assets/Create/Render Texture</ShortKeyName>
+    <Path>Edit/Undo</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="12">
-    <TargetName>Assets/Create/Lightmap Parameters</TargetName>
-    <ShortKeyName>Assets/Create/Lightmap Parameters</ShortKeyName>
+    <Path>Edit/Redo</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="13">
+    <Path>Edit/Cut</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="14">
+    <Path>Edit/Copy</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="15">
+    <Path>Edit/Paste</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="16">
+    <Path>Edit/Duplicate</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="17">
+    <Path>Edit/Delete</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="18">
+    <Path>Edit/Frame Selected</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="19">
+    <Path>Edit/Lock View to Selected</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="20">
+    <Path>Edit/Find</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="21">
+    <Path>Edit/Select All</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="22">
+    <Path>Edit/Play</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="23">
+    <Path>Edit/Pause</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="24">
+    <Path>Edit/Step</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="25">
+    <Path>Edit/Sign in...</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="26">
+    <Path>Edit/Sign out</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="27">
+    <Path>Edit/Project Settings/Input</Path>
+    <ShortKeyName>#i</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="28">
+    <Path>Edit/Project Settings/Tags and Layers</Path>
+    <ShortKeyName>#l</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="29">
+    <Path>Edit/Project Settings/Audio</Path>
+    <ShortKeyName>#a</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="30">
+    <Path>Edit/Project Settings/Time</Path>
+    <ShortKeyName>#t</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="31">
+    <Path>Edit/Project Settings/Player</Path>
+    <ShortKeyName>_p</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="32">
+    <Path>Edit/Project Settings/Physics</Path>
+    <ShortKeyName>#p</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="33">
+    <Path>Edit/Project Settings/Physics 2D</Path>
+    <ShortKeyName>#&amp;p</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="34">
+    <Path>Edit/Project Settings/Quality</Path>
+    <ShortKeyName>#q</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="35">
+    <Path>Edit/Project Settings/Graphics</Path>
+    <ShortKeyName>#g</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="36">
+    <Path>Edit/Project Settings/Network</Path>
+    <ShortKeyName>_n</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="37">
+    <Path>Edit/Project Settings/Editor</Path>
+    <ShortKeyName>#e</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="38">
+    <Path>Edit/Project Settings/Script Execution Order</Path>
+    <ShortKeyName>_s</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="39">
+    <Path>Edit/Project Settings/Cluster Input</Path>
+    <ShortKeyName>_c</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="40">
+    <Path>Edit/Snap Settings...</Path>
+    <ShortKeyName>#c</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="41">
+    <Path>Assets/Create/Folder</Path>
+    <ShortKeyName>#n</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="42">
+    <Path>Assets/Create/C# Script</Path>
+    <ShortKeyName>#&amp;n</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="43">
+    <Path>Assets/Create/Javascript</Path>
+    <ShortKeyName>#&amp;j</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="44">
+    <Path>Assets/Create/Shader/Unlit Shader</Path>
+    <ShortKeyName>#s</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="45">
+    <Path>Assets/Create/Testing/Editor Test C# Script</Path>
+    <ShortKeyName>#&amp;t</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="46">
+    <Path>Assets/Create/Scene</Path>
+    <ShortKeyName>#&amp;s</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="47">
+    <Path>Assets/Create/Prefab</Path>
+    <ShortKeyName>#b</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="48">
+    <Path>Assets/Create/Audio Mixer</Path>
+    <ShortKeyName>_m</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="49">
+    <Path>Assets/Create/Material</Path>
+    <ShortKeyName>#m</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="50">
+    <Path>Assets/Create/Lens Flare</Path>
+    <ShortKeyName># </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="51">
+    <Path>Assets/Create/Render Texture</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="52">
+    <Path>Assets/Create/Lightmap Parameters</Path>
+    <ShortKeyName>
+    </ShortKeyName>
   </ShortcutKeyItem>
 </KeyData>
