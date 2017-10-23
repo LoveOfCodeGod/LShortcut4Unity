@@ -42,15 +42,21 @@ public class ShortcutWindowEditor : EditorWindow
 
 	private ShortItem ski;
 	private List<ShortItem> mSkiList;
-	private Vector2 scrollPositon;
-	private bool folderOut1;
-	private bool folderOut2;
-	private bool folderOut3;
-	private bool folderOut4;
-	private bool folderOut5;
-	private bool folderOut6;
-	private bool folderOut7;
-	private bool folderOut8;
+
+	private string[] m_PopListNames = new string[]
+		{"File", "Edit", "Assets", "GameObject", "Component", "Help", "Extension"};
+	private ShortType m_SType;
+
+	private Vector2 scrollPositon1,
+		scrollPositon2,
+		scrollPositon3,
+		scrollPositon4,
+		scrollPositon5,
+		scrollPositon6,
+		scrollPositon7,
+		scrollPositon8;
+
+	private bool folderOut1, folderOut2, folderOut3, folderOut4, folderOut5, folderOut6, folderOut7, folderOut8;
 
 	private Dictionary<ShortType, List<ShortItem>> m_ShortKeyDict;
 	
@@ -59,7 +65,8 @@ public class ShortcutWindowEditor : EditorWindow
 		InitSystemData();
 		ski=new ShortItem("","");
 		mSkiList=new List<ShortItem>();
-		scrollPositon = new Vector2(300, 500);
+		scrollPositon1 = scrollPositon2 = scrollPositon3 = scrollPositon4 =
+			scrollPositon5 = scrollPositon6 = scrollPositon7 = scrollPositon8 = new Vector2(300, 500);
 	}
 
 	void OnGUI()
@@ -78,13 +85,14 @@ public class ShortcutWindowEditor : EditorWindow
 		ShowList();
 		//button
 		EditorGUILayout.BeginHorizontal();
+		m_SType =(ShortType) EditorGUILayout.Popup((int)m_SType,m_PopListNames);
 		if(GUILayout.Button("add"))
 		{
 			ski=new ShortItem("Editor1/Editor2/Editor3","");
 			Debug.LogFormat("add {0} {1} {2} {3} ",ski.Path,ski.ShortKey,ski.MenuItemName,ski.FuncName);
-			if(m_ShortKeyDict[ShortType.Extension]==null)
-				m_ShortKeyDict[ShortType.Extension]=new List<ShortItem>();
-			m_ShortKeyDict[ShortType.Extension].Add(ski);
+			if(m_ShortKeyDict[m_SType]==null)
+				m_ShortKeyDict[m_SType]=new List<ShortItem>();
+			m_ShortKeyDict[m_SType].Add(ski);
 		}
 		if (GUILayout.Button("save"))
 		{
@@ -146,63 +154,63 @@ public class ShortcutWindowEditor : EditorWindow
 					folderOut1 = EditorGUILayout.Foldout(folderOut1,ShortType.File.ToString());
 					if (folderOut1)
 					{
-						ShowItemList(ShortType.File);
+						ShowItemList(ShortType.File,scrollPositon1);
 					}
 					break;
 				case ShortType.Edit:
 					folderOut2 = EditorGUILayout.Foldout(folderOut2,ShortType.Edit.ToString());
 					if (folderOut2)
 					{
-						ShowItemList(ShortType.Edit);
+						ShowItemList(ShortType.Edit,scrollPositon2);
 					}
 					break;
 				case ShortType.Assets:
 					folderOut3 = EditorGUILayout.Foldout(folderOut3,ShortType.Assets.ToString());
 					if (folderOut3)
 					{
-						ShowItemList(ShortType.Assets);
+						ShowItemList(ShortType.Assets,scrollPositon3);
 					}
 					break;
 				case ShortType.GameObject:
 					folderOut4 = EditorGUILayout.Foldout(folderOut4,ShortType.GameObject.ToString());
 					if (folderOut4)
 					{
-						ShowItemList(ShortType.GameObject);
+						ShowItemList(ShortType.GameObject,scrollPositon4);
 					}
 					break;
 				case ShortType.Component:
 					folderOut5 = EditorGUILayout.Foldout(folderOut5,ShortType.Component.ToString());
 					if (folderOut5)
 					{
-						ShowItemList(ShortType.Component);
+						ShowItemList(ShortType.Component,scrollPositon5);
 					}
 					break;
 				case ShortType.Window:
 					folderOut6 = EditorGUILayout.Foldout(folderOut6,ShortType.Window.ToString());
 					if (folderOut6)
 					{
-						ShowItemList(ShortType.Window);
+						ShowItemList(ShortType.Window,scrollPositon6);
 					}
 					break;
 				case ShortType.Help:
 					folderOut7 = EditorGUILayout.Foldout(folderOut7,ShortType.Help.ToString());
 					if (folderOut7)
 					{
-						ShowItemList(ShortType.Help);
+						ShowItemList(ShortType.Help,scrollPositon7);
 					}
 					break;
 				case ShortType.Extension:
 					folderOut8 = EditorGUILayout.Foldout(folderOut8,ShortType.Extension.ToString());
 					if (folderOut8)
 					{
-						ShowItemList(ShortType.Extension,false);
+						ShowItemList(ShortType.Extension,scrollPositon8,false);
 					}
 					break;
 			}
 		}
 	}
 
-	void ShowItemList(ShortType sType,bool isSystem=true)
+	void ShowItemList(ShortType sType,Vector2 scrollPositon,bool isSystem=false)
 	{
 		//show
 		scrollPositon =EditorGUILayout.BeginScrollView(scrollPositon);
@@ -216,7 +224,7 @@ public class ShortcutWindowEditor : EditorWindow
 		EditorGUILayout.EndScrollView();
 	}
 
-	void ShowItem(ShortItem codeItem,List<ShortItem> list,bool isSystem=true)
+	void ShowItem(ShortItem codeItem,List<ShortItem> list,bool isSystem=false)
 	{
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.LabelField("Path:",GUILayout.Width(85));
