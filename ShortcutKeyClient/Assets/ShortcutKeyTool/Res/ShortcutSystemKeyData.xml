@@ -1,0 +1,50 @@
+<KeyData>
+  <ShortcutKeyItem id="1">
+    <TargetName>Assets/Create/Folder</TargetName>
+    <ShortKeyName>Assets/Create/Folder</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="2">
+    <TargetName>Assets/Create/C# Script</TargetName>
+    <ShortKeyName>Assets/Create/C# Script</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="3">
+    <TargetName>Assets/Create/Javascript</TargetName>
+    <ShortKeyName>Assets/Create/Javascript</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="4">
+    <TargetName>Assets/Create/Shader/Unlit Shader</TargetName>
+    <ShortKeyName>Assets/Create/Shader/Unlit Shader</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="5">
+    <TargetName>Assets/Create/Testing/Editor Test C# Script</TargetName>
+    <ShortKeyName>Assets/Create/Testing/Editor Test C# Script</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="6">
+    <TargetName>Assets/Create/Scene</TargetName>
+    <ShortKeyName>Assets/Create/Scene</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="7">
+    <TargetName>Assets/Create/Prefab</TargetName>
+    <ShortKeyName>Assets/Create/Prefab</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="8">
+    <TargetName>Assets/Create/Audio Mixer</TargetName>
+    <ShortKeyName>Assets/Create/Audio Mixer</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="9">
+    <TargetName>Assets/Create/Material</TargetName>
+    <ShortKeyName>Assets/Create/Material</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="10">
+    <TargetName>Assets/Create/Lens Flare</TargetName>
+    <ShortKeyName>Assets/Create/Lens Flare</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="11">
+    <TargetName>Assets/Create/Render Texture</TargetName>
+    <ShortKeyName>Assets/Create/Render Texture</ShortKeyName>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="12">
+    <TargetName>Assets/Create/Lightmap Parameters</TargetName>
+    <ShortKeyName>Assets/Create/Lightmap Parameters</ShortKeyName>
+  </ShortcutKeyItem>
+</KeyData>
