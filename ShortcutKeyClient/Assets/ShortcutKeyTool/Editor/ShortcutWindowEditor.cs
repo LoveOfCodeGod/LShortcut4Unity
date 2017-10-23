@@ -30,15 +30,15 @@ public class ShortcutWindowEditor : EditorWindow
 		myWindow.Show();
 	}
 
-	private ShortcutKeyItem ski;
-	private List<ShortcutKeyItem> mSkiList;
+	private ShortKeyCodeItem ski;
+	private List<ShortKeyCodeItem> mSkiList;
 	private Vector2 scrollPositon;
 	private bool folderOut;
 	
 	void Awake()
 	{
-		ski=new ShortcutKeyItem();
-		mSkiList = new List<ShortcutKeyItem> ();
+		ski=new ShortKeyCodeItem();
+		mSkiList = new List<ShortKeyCodeItem> ();
 		mSkiList = LoadShortcutKeyFromFile (ShortcutSavePath);
 		scrollPositon = new Vector2(300, 500);
 	}
@@ -73,10 +73,10 @@ public class ShortcutWindowEditor : EditorWindow
 		EditorGUILayout.BeginHorizontal();
 		if(GUILayout.Button("add"))
 		{
-			ski=new ShortcutKeyItem("Editor1/Editor2/Editor3","");
+			ski=new ShortKeyCodeItem("Editor1/Editor2/Editor3","");
 			Debug.LogFormat("add {0} {1} {2} {3} ",ski.TargetName,ski.ShortKeyName,ski.MenuItemName,ski.FuncName);
 			if(mSkiList==null)
-				mSkiList=new List<ShortcutKeyItem>();
+				mSkiList=new List<ShortKeyCodeItem>();
 			mSkiList.Add(ski);
 		}
 		if (GUILayout.Button("save"))
@@ -100,24 +100,24 @@ public class ShortcutWindowEditor : EditorWindow
 		}
 	}
 
-	void ShowItem(ShortcutKeyItem item)
+	void ShowItem(ShortKeyCodeItem codeItem)
 	{
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.LabelField("TargetName:",GUILayout.Width(85));
-		item.TargetName = EditorGUILayout.TextField(item.TargetName, GUILayout.Width(200));
+		codeItem.TargetName = EditorGUILayout.TextField(codeItem.TargetName, GUILayout.Width(200));
 		EditorGUILayout.LabelField("ShortcutName:",GUILayout.Width(85));
-		item.ShortKeyName = EditorGUILayout.TextField(item.ShortKeyName, GUILayout.Width(85));
+		codeItem.ShortKeyName = EditorGUILayout.TextField(codeItem.ShortKeyName, GUILayout.Width(85));
 		if (GUILayout.Button("delete",GUILayout.Width(70),GUILayout.Height(20)))
 		{
-			if (mSkiList.Contains(item))
+			if (mSkiList.Contains(codeItem))
 			{
-				mSkiList.Remove(item);
+				mSkiList.Remove(codeItem);
 			}
 		}
 		EditorGUILayout.EndHorizontal();
 	}
 	
-	private void SaveShortcutKey2EditorCode(string strFilePath,List<ShortcutKeyItem> skiList)
+	private void SaveShortcutKey2EditorCode(string strFilePath,List<ShortKeyCodeItem> skiList)
 	{
 		if (!File.Exists(strFilePath))
 		{
@@ -165,7 +165,7 @@ public class ShortcutWindowEditor : EditorWindow
 		Debug.Log(">>>>>>>Success Create UIPrefab Code: " + strDlg);
 	}
 
-	private void SaveShortcutKey2File(string savePath,List<ShortcutKeyItem> list)
+	private void SaveShortcutKey2File(string savePath,List<ShortKeyCodeItem> list)
 	{
 		if (!File.Exists(savePath))
 		{
@@ -193,11 +193,11 @@ public class ShortcutWindowEditor : EditorWindow
 		xml.Save (savePath);
 	}
 
-	private List<ShortcutKeyItem> LoadShortcutKeyFromFile(string savePath)
+	private List<ShortKeyCodeItem> LoadShortcutKeyFromFile(string savePath)
 	{
 		if (!File.Exists (savePath))
 			return null;
-		List<ShortcutKeyItem> itemList = new List<ShortcutKeyItem> ();
+		List<ShortKeyCodeItem> itemList = new List<ShortKeyCodeItem> ();
 		XmlDocument xml = new XmlDocument ();
 		xml.Load (savePath);
 		XmlNodeList xnlList = xml.SelectSingleNode ("KeyData").ChildNodes;
@@ -214,7 +214,7 @@ public class ShortcutWindowEditor : EditorWindow
 					if (item.Name.Equals ("ShortKeyName"))
 						sn = item.InnerText;
 				}					
-				itemList.Add (new ShortcutKeyItem (tn,sn));
+				itemList.Add (new ShortKeyCodeItem (tn,sn));
 			}
 
 		}
@@ -223,7 +223,7 @@ public class ShortcutWindowEditor : EditorWindow
 }
 
 [Serializable]
-public class ShortcutKeyItem
+public class ShortKeyCodeItem
 {
 	public string TargetName;
 	public string ShortKeyName;
@@ -248,13 +248,13 @@ public class ShortcutKeyItem
 		}
 	}
 
-	public ShortcutKeyItem()
+	public ShortKeyCodeItem()
 	{
 		TargetName = "";
 		ShortKeyName = "";
 	}
 
-	public ShortcutKeyItem(string _targetName,string _shortcutName)
+	public ShortKeyCodeItem(string _targetName,string _shortcutName)
 	{
 		TargetName = "";
 		ShortKeyName = "";

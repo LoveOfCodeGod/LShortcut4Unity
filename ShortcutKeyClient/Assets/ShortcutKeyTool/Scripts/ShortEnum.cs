@@ -12,6 +12,8 @@
 
 public class ShortKey
 {
+    #region 日常键
+
     public readonly static string A = "a";
     public readonly static string B = "b";
     public readonly static string C = "c";
@@ -67,23 +69,36 @@ public class ShortKey
     public readonly static string Home = "HOME";
     public readonly static string PageUp = "PGUP";
     public readonly static string PageDown = "PGDN";
+
     /// <summary>
     /// 空格键
     /// </summary>
     public readonly static string Space = " ";
+
     /// <summary>
     /// ,
     /// </summary>
     public readonly static string Comma = ",";
+
     /// <summary>
     /// ,
     /// </summary>
     public readonly static string Period = ".";
-    //组合键
-    //    Shift,
-//    /// <summary>
-//    /// Window==>Ctrl,Mac==>Option
-//    /// </summary>
-//    Ctrl,
-//    Command,
+    //TODO:其他
+
+    #endregion
+
+    #region 辅助键 
+
+    public readonly static string Shift = "#";
+
+    /// <summary>
+    /// Window-->Ctrl Mac-->Option
+    /// </summary>
+    public readonly static string Control = "&";
+
+    public readonly static string Command = "%";
+    public readonly static string NormalKey = "_";
+
+    #endregion
 }
