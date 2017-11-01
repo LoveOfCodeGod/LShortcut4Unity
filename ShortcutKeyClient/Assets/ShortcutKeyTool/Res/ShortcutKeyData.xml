@@ -1,1 +1,6 @@
-<KeyData />
+<KeyData>
+  <ShortcutKeyItem id="1">
+    <Path>LLL/Tools/ShortcutWindow</Path>
+    <ShortKeyName>_o</ShortKeyName>
+  </ShortcutKeyItem>
+</KeyData>

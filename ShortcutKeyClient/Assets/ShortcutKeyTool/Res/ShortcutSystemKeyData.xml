@@ -235,4 +235,8 @@
     <ShortKeyName>
     </ShortKeyName>
   </ShortcutKeyItem>
+  <ShortcutKeyItem id="53">
+    <Path>GameObject/Create Empty</Path>
+    <ShortKeyName>_y</ShortKeyName>
+  </ShortcutKeyItem>
 </KeyData>

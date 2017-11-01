@@ -4,13 +4,14 @@ using UnityEditor;
 using UnityEngine;
 using System;
 using System.IO;
+using System.Linq;
 using System.Xml;
 using System.Text;
 using UnityEngine.UI;
 
 public class ShortcutWindowEditor : EditorWindow
 {
-	private static string tipsLabelText = "* %->commond #->shift &->ctrl _a->keyboard[A]";
+	private static string[] popupKEYStr = ShortKeyCode.popupKEYDict.Keys.ToArray();
 	
 	private static string ShortcutSystemPath 
 	{
@@ -32,7 +33,7 @@ public class ShortcutWindowEditor : EditorWindow
 		get { return Application.dataPath + "/ShortcutKeyTool/Res/ShortcutKeyData.xml";}
 	}
 
-	[MenuItem("LLL/Tools/ShortcutWindow _o",false,3)]
+	[MenuItem("LLL/Tools/ShortcutWindow",false,3)]
 	static void SetUpShortcutWindow()
 	{
 		ShortcutWindowEditor myWindow =
@@ -42,9 +43,6 @@ public class ShortcutWindowEditor : EditorWindow
 
 	private ShortItem ski;
 	private List<ShortItem> mSkiList;
-
-	private string[] m_PopListNames = new string[]
-		{"File", "Edit", "Assets", "GameObject", "Component", "Help", "Extension"};
 	private ShortType m_SType;
 
 	private Vector2 scrollPositon1,
@@ -59,6 +57,7 @@ public class ShortcutWindowEditor : EditorWindow
 	private bool folderOut1, folderOut2, folderOut3, folderOut4, folderOut5, folderOut6, folderOut7, folderOut8;
 
 	private Dictionary<ShortType, List<ShortItem>> m_ShortKeyDict;
+	private bool isOldFirst = false;
 	
 	void Awake()
 	{
@@ -78,14 +77,12 @@ public class ShortcutWindowEditor : EditorWindow
 		GUILayout.Label("Shortcut Style");
 		GUI.skin.label.fontSize = 12;
 		GUILayout.Space(10);
-		//tips
-		EditorGUILayout.LabelField(tipsLabelText);
-		GUILayout.Space(10);
+		isOldFirst = EditorGUILayout.Toggle("Old Version First", isOldFirst);
 		//Show
 		ShowList();
 		//button
 		EditorGUILayout.BeginHorizontal();
-		m_SType =(ShortType) EditorGUILayout.Popup((int)m_SType,m_PopListNames);
+		m_SType =(ShortType) EditorGUILayout.EnumPopup(m_SType);
 		if(GUILayout.Button("add"))
 		{
 			ski=new ShortItem("Editor1/Editor2/Editor3","");
@@ -96,6 +93,8 @@ public class ShortcutWindowEditor : EditorWindow
 		}
 		if (GUILayout.Button("save"))
 		{
+			mSkiList.Clear();
+			mSkiList=new List<ShortItem>();
 			foreach (ShortType st in m_ShortKeyDict.Keys)
 			{
 				if (st != ShortType.Extension)
@@ -135,12 +134,32 @@ public class ShortcutWindowEditor : EditorWindow
 				{ShortType.Component,LoadShortcutKeyFromFile (ShortcutSystemSavePath,ShortType.Component)},
 				{ShortType.Window,LoadShortcutKeyFromFile (ShortcutSystemSavePath,ShortType.Window)},
 				{ShortType.Help,LoadShortcutKeyFromFile (ShortcutSystemSavePath,ShortType.Help)},
-				{ShortType.Extension,LoadShortcutKeyFromFile (ShortcutSystemSavePath,ShortType.Extension)}
+				{ShortType.Extension,LoadShortcutKeyFromFile (ShortcutSavePath,ShortType.Extension)}
 			};
 		}
 	}
 
-	void ShowList()
+	private void MutualExclusionFolderOut(bool[] foderBools)
+	{
+		int flag = 0;
+		for (int i = 0; i < foderBools.Length; i++)
+		{
+			if (foderBools[i])
+			{
+				flag=i;
+				break;
+			}
+		}
+		for (int i = 0; i < foderBools.Length; i++)
+		{
+			if (i!=flag)
+			{
+				foderBools[i] = false;
+			}
+		}
+	}
+
+	private void ShowList()
 	{
 		if (m_ShortKeyDict == null)
 		{
@@ -151,66 +170,66 @@ public class ShortcutWindowEditor : EditorWindow
 			switch (sType)
 			{
 				case ShortType.File:
-					folderOut1 = EditorGUILayout.Foldout(folderOut1,ShortType.File.ToString());
+					folderOut1 = EditorGUILayout.Foldout(folderOut1,ShortType.File.ToString(),true);
 					if (folderOut1)
 					{
-						ShowItemList(ShortType.File,scrollPositon1);
+						ShowItemList(ShortType.File,ref scrollPositon1);
 					}
 					break;
 				case ShortType.Edit:
-					folderOut2 = EditorGUILayout.Foldout(folderOut2,ShortType.Edit.ToString());
+					folderOut2 = EditorGUILayout.Foldout(folderOut2,ShortType.Edit.ToString(),true);
 					if (folderOut2)
 					{
-						ShowItemList(ShortType.Edit,scrollPositon2);
+						ShowItemList(ShortType.Edit,ref scrollPositon2);
 					}
 					break;
 				case ShortType.Assets:
-					folderOut3 = EditorGUILayout.Foldout(folderOut3,ShortType.Assets.ToString());
+					folderOut3 = EditorGUILayout.Foldout(folderOut3,ShortType.Assets.ToString(),true);
 					if (folderOut3)
 					{
-						ShowItemList(ShortType.Assets,scrollPositon3);
+						ShowItemList(ShortType.Assets,ref scrollPositon3);
 					}
 					break;
 				case ShortType.GameObject:
-					folderOut4 = EditorGUILayout.Foldout(folderOut4,ShortType.GameObject.ToString());
+					folderOut4 = EditorGUILayout.Foldout(folderOut4,ShortType.GameObject.ToString(),true);
 					if (folderOut4)
 					{
-						ShowItemList(ShortType.GameObject,scrollPositon4);
+						ShowItemList(ShortType.GameObject,ref scrollPositon4);
 					}
 					break;
 				case ShortType.Component:
-					folderOut5 = EditorGUILayout.Foldout(folderOut5,ShortType.Component.ToString());
+					folderOut5 = EditorGUILayout.Foldout(folderOut5,ShortType.Component.ToString(),true);
 					if (folderOut5)
 					{
-						ShowItemList(ShortType.Component,scrollPositon5);
+						ShowItemList(ShortType.Component,ref scrollPositon5);
 					}
 					break;
 				case ShortType.Window:
-					folderOut6 = EditorGUILayout.Foldout(folderOut6,ShortType.Window.ToString());
+					folderOut6 = EditorGUILayout.Foldout(folderOut6,ShortType.Window.ToString(),true);
 					if (folderOut6)
 					{
-						ShowItemList(ShortType.Window,scrollPositon6);
+						ShowItemList(ShortType.Window,ref scrollPositon6);
 					}
 					break;
 				case ShortType.Help:
-					folderOut7 = EditorGUILayout.Foldout(folderOut7,ShortType.Help.ToString());
+					folderOut7 = EditorGUILayout.Foldout(folderOut7,ShortType.Help.ToString(),true);
 					if (folderOut7)
 					{
-						ShowItemList(ShortType.Help,scrollPositon7);
+						ShowItemList(ShortType.Help,ref scrollPositon7);
 					}
 					break;
 				case ShortType.Extension:
-					folderOut8 = EditorGUILayout.Foldout(folderOut8,ShortType.Extension.ToString());
+					folderOut8 = EditorGUILayout.Foldout(folderOut8,ShortType.Extension.ToString(),true);
 					if (folderOut8)
 					{
-						ShowItemList(ShortType.Extension,scrollPositon8,false);
+						ShowItemList(ShortType.Extension,ref scrollPositon8,false);
 					}
 					break;
 			}
 		}
 	}
 
-	void ShowItemList(ShortType sType,Vector2 scrollPositon,bool isSystem=false)
+	private void ShowItemList(ShortType sType,ref Vector2 scrollPositon,bool isSystem=false)
 	{
 		//show
 		scrollPositon =EditorGUILayout.BeginScrollView(scrollPositon);
@@ -218,19 +237,41 @@ public class ShortcutWindowEditor : EditorWindow
 		{
 			for (int i = 0; i < m_ShortKeyDict[sType].Count; i++)
 			{
+				GUILayout.Space(5);
 				ShowItem(m_ShortKeyDict[sType][i],m_ShortKeyDict[sType],isSystem);
+				GUILayout.Space(5);
 			}
 		}
 		EditorGUILayout.EndScrollView();
 	}
 
-	void ShowItem(ShortItem codeItem,List<ShortItem> list,bool isSystem=false)
+	private void ShowItem(ShortItem codeItem,List<ShortItem> list,bool isSystem=false)
 	{
 		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Path:",GUILayout.Width(85));
-		codeItem.Path = EditorGUILayout.TextField(codeItem.Path, GUILayout.Width(200));
-		EditorGUILayout.LabelField("ShortcutName:",GUILayout.Width(85));
-		codeItem.ShortKey = EditorGUILayout.TextField(codeItem.ShortKey, GUILayout.Width(85));
+		EditorGUILayout.LabelField("Path:",GUILayout.Width(45));
+		if (codeItem.BlongTo == ShortType.Extension)
+			codeItem.Path = EditorGUILayout.TextField(codeItem.Path, GUILayout.Width(200));
+		else
+			EditorGUILayout.LabelField("",codeItem.Path,GUILayout.Width(200));
+		if (isOldFirst)
+		{
+			EditorGUILayout.LabelField("ShortcutName:",GUILayout.Width(85));
+			codeItem.ShortKey = EditorGUILayout.TextField(codeItem.ShortKey, GUILayout.Width(85));
+		}
+		else
+		{
+			GUILayout.Space(10);
+			//辅助键
+			codeItem.AIDShift = EditorGUILayout.ToggleLeft("Shift", codeItem.AIDShift, GUILayout.Width(50));
+			codeItem.AIDCommand = EditorGUILayout.ToggleLeft("Command", codeItem.AIDCommand, GUILayout.Width(80));
+			codeItem.AIDCtrl = EditorGUILayout.ToggleLeft("Ctrl", codeItem.AIDCtrl, GUILayout.Width(50));
+			codeItem.AIDSingle = EditorGUILayout.ToggleLeft("Single", codeItem.AIDSingle, GUILayout.Width(50));
+			//热键
+			codeItem.KeySelectIndex = EditorGUILayout.Popup(codeItem.KeySelectIndex, popupKEYStr, GUILayout.Width(70));
+			//设置热键
+			codeItem.SetKey(ShortKeyCode.popupKEYDict[popupKEYStr[codeItem.KeySelectIndex]]);
+			GUILayout.Space(10);
+		}
 		if (!isSystem && GUILayout.Button("delete",GUILayout.Width(70),GUILayout.Height(20)))
 		{
 			if (list.Contains(codeItem))
@@ -330,6 +371,7 @@ public class ShortcutWindowEditor : EditorWindow
 			XmlElement xel = xnlList [i] as XmlElement;
 			if(xel.GetAttribute("id")==(i+1).ToString())
 			{
+				ShortItem itemRes=new ShortItem("","");
 				foreach (XmlNode item in xel.ChildNodes) 
 				{
 					if (item.Name.Equals ("Path"))
@@ -337,8 +379,21 @@ public class ShortcutWindowEditor : EditorWindow
 					if (item.Name.Equals ("ShortKeyName"))
 						sn = item.InnerText;
 				}
+
 				if (tn.Split('/')[0].Equals(sType.ToString()))
-					itemList.Add(new ShortItem(tn, sn));
+				{
+					itemRes.SetData(tn,sn,sType);
+					if (!string.IsNullOrEmpty(sn)&&sn.Length>=2)
+					{
+						if (sn.Contains(ShortKeyCode.Command))
+							itemRes.AIDCommand = true;
+						if (sn.Contains(ShortKeyCode.Shift))
+							itemRes.AIDShift = true;
+						if (sn.Contains(ShortKeyCode.Control))
+							itemRes.AIDCtrl = true;
+					}
+					itemList.Add(itemRes);
+				}
 			}
 
 		}

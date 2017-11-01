@@ -314,4 +314,10 @@ public class ShortcutKeySystemEditor
 			EditorApplication.ExecuteMenuItem("Assets/Create/Lightmap Parameters");
 		}
 
+		[MenuItem("LLL/ShortcutKey/CreateEmpty _y")]
+		static void ShortcutKey_GameObjectCreateEmpty()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/Create Empty");
+		}
+
 }
