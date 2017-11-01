@@ -93,6 +93,11 @@ public class ShortItem
 		}
 	}
 
+	public ShortItem():this(String.Empty, String.Empty)
+	{
+		
+	}
+
 	public ShortItem(string path,string shortkey,ShortType shortType=ShortType.Extension)
 	{
 		SetData(path,shortkey,shortType);

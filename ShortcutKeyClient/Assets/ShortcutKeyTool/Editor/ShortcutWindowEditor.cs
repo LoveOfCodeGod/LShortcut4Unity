@@ -85,7 +85,7 @@ public class ShortcutWindowEditor : EditorWindow
 		m_SType =(ShortType) EditorGUILayout.EnumPopup(m_SType);
 		if(GUILayout.Button("add"))
 		{
-			ski=new ShortItem("Editor1/Editor2/Editor3","");
+			ski=new ShortItem("Editor1/Editor2/Editor3","",m_SType);
 			Debug.LogFormat("add {0} {1} {2} {3} ",ski.Path,ski.ShortKey,ski.MenuItemName,ski.FuncName);
 			if(m_ShortKeyDict[m_SType]==null)
 				m_ShortKeyDict[m_SType]=new List<ShortItem>();
@@ -371,7 +371,7 @@ public class ShortcutWindowEditor : EditorWindow
 			XmlElement xel = xnlList [i] as XmlElement;
 			if(xel.GetAttribute("id")==(i+1).ToString())
 			{
-				ShortItem itemRes=new ShortItem("","");
+				ShortItem itemRes=new ShortItem();
 				foreach (XmlNode item in xel.ChildNodes) 
 				{
 					if (item.Name.Equals ("Path"))
