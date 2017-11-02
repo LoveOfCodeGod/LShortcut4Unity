@@ -2,5 +2,6 @@
   <ShortcutKeyItem id="1">
     <Path>LLL/Tools/ShortcutWindow</Path>
     <ShortKeyName>_o</ShortKeyName>
+    <BlongTo>Extension</BlongTo>
   </ShortcutKeyItem>
 </KeyData>

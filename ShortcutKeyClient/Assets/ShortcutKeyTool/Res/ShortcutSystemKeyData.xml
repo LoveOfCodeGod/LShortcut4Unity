@@ -3,240 +3,293 @@
     <Path>File/New Scene</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="2">
     <Path>File/Open Scene</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="3">
     <Path>File/Save Scenes</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="4">
     <Path>File/Save Scene as...</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="5">
     <Path>File/New Project...</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="6">
     <Path>File/Open Project...</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="7">
     <Path>File/Save Project</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="8">
     <Path>File/Build Settings...</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="9">
     <Path>File/Build &amp; Run</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="10">
     <Path>File/Close</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>File</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="11">
     <Path>Edit/Undo</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="12">
     <Path>Edit/Redo</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="13">
     <Path>Edit/Cut</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="14">
     <Path>Edit/Copy</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="15">
     <Path>Edit/Paste</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="16">
     <Path>Edit/Duplicate</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="17">
     <Path>Edit/Delete</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="18">
     <Path>Edit/Frame Selected</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="19">
     <Path>Edit/Lock View to Selected</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="20">
     <Path>Edit/Find</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="21">
     <Path>Edit/Select All</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="22">
     <Path>Edit/Play</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="23">
     <Path>Edit/Pause</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="24">
     <Path>Edit/Step</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="25">
     <Path>Edit/Sign in...</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="26">
     <Path>Edit/Sign out</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="27">
     <Path>Edit/Project Settings/Input</Path>
     <ShortKeyName>#i</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="28">
     <Path>Edit/Project Settings/Tags and Layers</Path>
     <ShortKeyName>#l</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="29">
     <Path>Edit/Project Settings/Audio</Path>
     <ShortKeyName>#a</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="30">
     <Path>Edit/Project Settings/Time</Path>
     <ShortKeyName>#t</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="31">
     <Path>Edit/Project Settings/Player</Path>
     <ShortKeyName>_p</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="32">
     <Path>Edit/Project Settings/Physics</Path>
     <ShortKeyName>#p</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="33">
     <Path>Edit/Project Settings/Physics 2D</Path>
     <ShortKeyName>#&amp;p</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="34">
     <Path>Edit/Project Settings/Quality</Path>
     <ShortKeyName>#q</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="35">
     <Path>Edit/Project Settings/Graphics</Path>
     <ShortKeyName>#g</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="36">
     <Path>Edit/Project Settings/Network</Path>
     <ShortKeyName>_n</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="37">
     <Path>Edit/Project Settings/Editor</Path>
     <ShortKeyName>#e</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="38">
     <Path>Edit/Project Settings/Script Execution Order</Path>
     <ShortKeyName>_s</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="39">
     <Path>Edit/Project Settings/Cluster Input</Path>
     <ShortKeyName>_c</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="40">
     <Path>Edit/Snap Settings...</Path>
     <ShortKeyName>#c</ShortKeyName>
+    <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="41">
     <Path>Assets/Create/Folder</Path>
     <ShortKeyName>#n</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="42">
     <Path>Assets/Create/C# Script</Path>
     <ShortKeyName>#&amp;n</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="43">
     <Path>Assets/Create/Javascript</Path>
     <ShortKeyName>#&amp;j</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="44">
     <Path>Assets/Create/Shader/Unlit Shader</Path>
     <ShortKeyName>#s</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="45">
     <Path>Assets/Create/Testing/Editor Test C# Script</Path>
     <ShortKeyName>#&amp;t</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="46">
     <Path>Assets/Create/Scene</Path>
     <ShortKeyName>#&amp;s</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="47">
     <Path>Assets/Create/Prefab</Path>
     <ShortKeyName>#b</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="48">
     <Path>Assets/Create/Audio Mixer</Path>
     <ShortKeyName>_m</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="49">
     <Path>Assets/Create/Material</Path>
     <ShortKeyName>#m</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="50">
     <Path>Assets/Create/Lens Flare</Path>
     <ShortKeyName># </ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="51">
     <Path>Assets/Create/Render Texture</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="52">
     <Path>Assets/Create/Lightmap Parameters</Path>
     <ShortKeyName>
     </ShortKeyName>
+    <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="53">
     <Path>GameObject/Create Empty</Path>
     <ShortKeyName>_y</ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
   </ShortcutKeyItem>
 </KeyData>

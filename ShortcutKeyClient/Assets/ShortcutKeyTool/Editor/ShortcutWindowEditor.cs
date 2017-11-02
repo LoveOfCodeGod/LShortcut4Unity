@@ -339,9 +339,13 @@ public class ShortcutWindowEditor : EditorWindow
 			elementChild1.InnerText = list [i].Path;
 			XmlElement elementChild2 = xml.CreateElement("ShortKeyName");
 			elementChild2.InnerText = list [i].ShortKey;
+			XmlElement elementChild3 = xml.CreateElement("BlongTo");
+			Debug.Log(list[i].BlongTo);
+			elementChild3.InnerText = list [i].BlongTo.ToString();
 			//把节点一层一层的添加至xml中，注意他们之间的先后顺序，这是生成XML文件的顺序
 			element.AppendChild(elementChild1);
 			element.AppendChild(elementChild2);
+			element.AppendChild(elementChild3);
 			root.AppendChild(element);
 		}
 		xml.AppendChild (root);
@@ -356,7 +360,7 @@ public class ShortcutWindowEditor : EditorWindow
 		XmlDocument xml = new XmlDocument ();
 		xml.Load (savePath);
 		XmlNodeList xnlList = xml.SelectSingleNode ("KeyData").ChildNodes;
-		string tn = "", sn = "";
+		string tn = "", sn = "",blongto="";
 		for (int i = 0; i < xnlList.Count; i++) 
 		{
 			XmlElement xel = xnlList [i] as XmlElement;
@@ -369,9 +373,11 @@ public class ShortcutWindowEditor : EditorWindow
 						tn = item.InnerText;
 					if (item.Name.Equals ("ShortKeyName"))
 						sn = item.InnerText;
+					if (item.Name.Equals ("BlongTo"))
+						blongto = item.InnerText;
 				}
 
-				if (tn.Split('/')[0].Equals(sType.ToString()))
+				if (blongto.Equals(sType.ToString()))
 				{
 					itemRes.SetData(tn,sn,sType);
 					if (!string.IsNullOrEmpty(sn)&&sn.Length>=2)
