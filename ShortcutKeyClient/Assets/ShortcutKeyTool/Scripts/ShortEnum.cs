@@ -117,7 +117,7 @@ public class ShortKeyCode
 
     public static Dictionary<string,string> popupKEYDict =new Dictionary<string, string>()
     {
-        {"",String.Empty},
+        {"Empty",String.Empty},
         
         {"A",A},
         {"B",B},

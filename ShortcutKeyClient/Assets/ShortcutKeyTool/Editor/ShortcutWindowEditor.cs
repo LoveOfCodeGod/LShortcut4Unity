@@ -240,10 +240,10 @@ public class ShortcutWindowEditor : EditorWindow
 	{
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.LabelField("Path:",GUILayout.Width(45));
-		if (codeItem.BlongTo == ShortType.Extension)
+//		if (codeItem.BlongTo == ShortType.Extension)
 			codeItem.Path = EditorGUILayout.TextField(codeItem.Path, GUILayout.Width(200));
-		else
-			EditorGUILayout.LabelField("",codeItem.Path,GUILayout.Width(200));
+//		else
+//			EditorGUILayout.LabelField("",codeItem.Path,GUILayout.Width(200));
 		if (isOldFirst)
 		{
 			EditorGUILayout.LabelField("ShortcutName:",GUILayout.Width(85));
@@ -340,7 +340,6 @@ public class ShortcutWindowEditor : EditorWindow
 			XmlElement elementChild2 = xml.CreateElement("ShortKeyName");
 			elementChild2.InnerText = list [i].ShortKey;
 			XmlElement elementChild3 = xml.CreateElement("BlongTo");
-			Debug.Log(list[i].BlongTo);
 			elementChild3.InnerText = list [i].BlongTo.ToString();
 			//把节点一层一层的添加至xml中，注意他们之间的先后顺序，这是生成XML文件的顺序
 			element.AppendChild(elementChild1);
@@ -350,6 +349,7 @@ public class ShortcutWindowEditor : EditorWindow
 		}
 		xml.AppendChild (root);
 		xml.Save(savePath);
+		Debug.Log("====>>>Save Success");
 	}
 
 	private List<ShortItem> LoadShortcutKeyFromFile(string savePath,ShortType sType)

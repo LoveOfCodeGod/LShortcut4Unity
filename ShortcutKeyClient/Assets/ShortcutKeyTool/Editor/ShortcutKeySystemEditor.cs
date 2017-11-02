@@ -158,7 +158,7 @@ public class ShortcutKeySystemEditor
 			EditorApplication.ExecuteMenuItem("Edit/Sign out");
 		}
 
-		[MenuItem("LLL/ShortcutKey/Input #i")]
+		[MenuItem("LLL/ShortcutKey/Input _i")]
 		static void ShortcutKey_EditProjectSettingsInput()
 		{
 			EditorApplication.ExecuteMenuItem("Edit/Project Settings/Input");
@@ -176,7 +176,7 @@ public class ShortcutKeySystemEditor
 			EditorApplication.ExecuteMenuItem("Edit/Project Settings/Audio");
 		}
 
-		[MenuItem("LLL/ShortcutKey/Time #t")]
+		[MenuItem("LLL/ShortcutKey/Time _t")]
 		static void ShortcutKey_EditProjectSettingsTime()
 		{
 			EditorApplication.ExecuteMenuItem("Edit/Project Settings/Time");
@@ -188,13 +188,13 @@ public class ShortcutKeySystemEditor
 			EditorApplication.ExecuteMenuItem("Edit/Project Settings/Player");
 		}
 
-		[MenuItem("LLL/ShortcutKey/Physics #p")]
+		[MenuItem("LLL/ShortcutKey/Physics #&p")]
 		static void ShortcutKey_EditProjectSettingsPhysics()
 		{
 			EditorApplication.ExecuteMenuItem("Edit/Project Settings/Physics");
 		}
 
-		[MenuItem("LLL/ShortcutKey/Physics2D #&p")]
+		[MenuItem("LLL/ShortcutKey/Physics2D ")]
 		static void ShortcutKey_EditProjectSettingsPhysics2D()
 		{
 			EditorApplication.ExecuteMenuItem("Edit/Project Settings/Physics 2D");
@@ -278,7 +278,7 @@ public class ShortcutKeySystemEditor
 			EditorApplication.ExecuteMenuItem("Assets/Create/Scene");
 		}
 
-		[MenuItem("LLL/ShortcutKey/Prefab #b")]
+		[MenuItem("LLL/ShortcutKey/Prefab ")]
 		static void ShortcutKey_AssetsCreatePrefab()
 		{
 			EditorApplication.ExecuteMenuItem("Assets/Create/Prefab");
@@ -314,10 +314,148 @@ public class ShortcutKeySystemEditor
 			EditorApplication.ExecuteMenuItem("Assets/Create/Lightmap Parameters");
 		}
 
-		[MenuItem("LLL/ShortcutKey/CreateEmpty _y")]
+		[MenuItem("LLL/ShortcutKey/AnimatorController ")]
+		static void ShortcutKey_AssetsCreateAnimatorController()
+		{
+			EditorApplication.ExecuteMenuItem("Assets/Create/Animator Controller");
+		}
+
+		[MenuItem("LLL/ShortcutKey/RevealinFinder %#f")]
+		static void ShortcutKey_AssetsRevealinFinder()
+		{
+			EditorApplication.ExecuteMenuItem("Assets/Reveal in Finder");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Open #o")]
+		static void ShortcutKey_AssetsOpen()
+		{
+			EditorApplication.ExecuteMenuItem("Assets/Open");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Delete #d")]
+		static void ShortcutKey_AssetsDelete()
+		{
+			EditorApplication.ExecuteMenuItem("Assets/Delete");
+		}
+
+		[MenuItem("LLL/ShortcutKey/OpenC#Project %#o")]
+		static void ShortcutKey_AssetsOpenCProject()
+		{
+			EditorApplication.ExecuteMenuItem("Assets/Open C# Project");
+		}
+
+		[MenuItem("LLL/ShortcutKey/CreateEmpty ")]
 		static void ShortcutKey_GameObjectCreateEmpty()
 		{
 			EditorApplication.ExecuteMenuItem("GameObject/Create Empty");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Cube ")]
+		static void ShortcutKey_GameObject3DObjectCube()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/3D Object/Cube");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Sphere ")]
+		static void ShortcutKey_GameObject3DObjectSphere()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/3D Object/Sphere");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Plane ")]
+		static void ShortcutKey_GameObject3DObjectPlane()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/3D Object/Plane");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Quad ")]
+		static void ShortcutKey_GameObject3DObjectQuad()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/3D Object/Quad");
+		}
+
+		[MenuItem("LLL/ShortcutKey/DirectionalLight ")]
+		static void ShortcutKey_GameObjectLightDirectionalLight()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/Light/Directional Light");
+		}
+
+		[MenuItem("LLL/ShortcutKey/PointLight ")]
+		static void ShortcutKey_GameObjectLightPointLight()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/Light/Point Light");
+		}
+
+		[MenuItem("LLL/ShortcutKey/SpotLight ")]
+		static void ShortcutKey_GameObjectLightSpotLight()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/Light/SpotLight");
+		}
+
+		[MenuItem("LLL/ShortcutKey/AudioSource ")]
+		static void ShortcutKey_GameObjectAudioAudioSource()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/Audio/Audio Source");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Text #t")]
+		static void ShortcutKey_GameObjectUIText()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/UI/Text");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Image #i")]
+		static void ShortcutKey_GameObjectUIImage()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/UI/Image");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Button #b")]
+		static void ShortcutKey_GameObjectUIButton()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/UI/Button");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Panel #p")]
+		static void ShortcutKey_GameObjectUIPanel()
+		{
+			EditorApplication.ExecuteMenuItem("GameObject/UI/Panel");
+		}
+
+		[MenuItem("LLL/ShortcutKey/2by3 ")]
+		static void ShortcutKey_WindowLayouts2by3()
+		{
+			EditorApplication.ExecuteMenuItem("Window/Layouts/2 by 3");
+		}
+
+		[MenuItem("LLL/ShortcutKey/SpritePacker ")]
+		static void ShortcutKey_WindowSpritePacker()
+		{
+			EditorApplication.ExecuteMenuItem("Window/Sprite Packer");
+		}
+
+		[MenuItem("LLL/ShortcutKey/EditorTestsRunner %#e")]
+		static void ShortcutKey_WindowEditorTestsRunner()
+		{
+			EditorApplication.ExecuteMenuItem("Window/Editor Tests Runner");
+		}
+
+		[MenuItem("LLL/ShortcutKey/Lighting #l")]
+		static void ShortcutKey_WindowLighting()
+		{
+			EditorApplication.ExecuteMenuItem("Window/Lighting");
+		}
+
+		[MenuItem("LLL/ShortcutKey/UnityManual #u")]
+		static void ShortcutKey_HelpUnityManual()
+		{
+			EditorApplication.ExecuteMenuItem("Help/Unity Manual");
+		}
+
+		[MenuItem("LLL/ShortcutKey/ScriptingReference #r")]
+		static void ShortcutKey_HelpScriptingReference()
+		{
+			EditorApplication.ExecuteMenuItem("Help/Scripting Reference");
 		}
 
 }

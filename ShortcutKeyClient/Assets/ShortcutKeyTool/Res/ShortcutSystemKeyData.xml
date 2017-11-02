@@ -157,7 +157,7 @@
   </ShortcutKeyItem>
   <ShortcutKeyItem id="27">
     <Path>Edit/Project Settings/Input</Path>
-    <ShortKeyName>#i</ShortKeyName>
+    <ShortKeyName>_i</ShortKeyName>
     <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="28">
@@ -172,7 +172,7 @@
   </ShortcutKeyItem>
   <ShortcutKeyItem id="30">
     <Path>Edit/Project Settings/Time</Path>
-    <ShortKeyName>#t</ShortKeyName>
+    <ShortKeyName>_t</ShortKeyName>
     <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="31">
@@ -182,12 +182,13 @@
   </ShortcutKeyItem>
   <ShortcutKeyItem id="32">
     <Path>Edit/Project Settings/Physics</Path>
-    <ShortKeyName>#p</ShortKeyName>
+    <ShortKeyName>#&amp;p</ShortKeyName>
     <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="33">
     <Path>Edit/Project Settings/Physics 2D</Path>
-    <ShortKeyName>#&amp;p</ShortKeyName>
+    <ShortKeyName>
+    </ShortKeyName>
     <BlongTo>Edit</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="34">
@@ -257,7 +258,8 @@
   </ShortcutKeyItem>
   <ShortcutKeyItem id="47">
     <Path>Assets/Create/Prefab</Path>
-    <ShortKeyName>#b</ShortKeyName>
+    <ShortKeyName>
+    </ShortKeyName>
     <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="48">
@@ -288,8 +290,135 @@
     <BlongTo>Assets</BlongTo>
   </ShortcutKeyItem>
   <ShortcutKeyItem id="53">
+    <Path>Assets/Create/Animator Controller</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>Assets</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="54">
+    <Path>Assets/Reveal in Finder</Path>
+    <ShortKeyName>%#f</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="55">
+    <Path>Assets/Open</Path>
+    <ShortKeyName>#o</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="56">
+    <Path>Assets/Delete</Path>
+    <ShortKeyName>#d</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="57">
+    <Path>Assets/Open C# Project</Path>
+    <ShortKeyName>%#o</ShortKeyName>
+    <BlongTo>Assets</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="58">
     <Path>GameObject/Create Empty</Path>
-    <ShortKeyName>_y</ShortKeyName>
+    <ShortKeyName>
+    </ShortKeyName>
     <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="59">
+    <Path>GameObject/3D Object/Cube</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="60">
+    <Path>GameObject/3D Object/Sphere</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="61">
+    <Path>GameObject/3D Object/Plane</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="62">
+    <Path>GameObject/3D Object/Quad</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="63">
+    <Path>GameObject/Light/Directional Light</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="64">
+    <Path>GameObject/Light/Point Light</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="65">
+    <Path>GameObject/Light/SpotLight</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="66">
+    <Path>GameObject/Audio/Audio Source</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="67">
+    <Path>GameObject/UI/Text</Path>
+    <ShortKeyName>#t</ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="68">
+    <Path>GameObject/UI/Image</Path>
+    <ShortKeyName>#i</ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="69">
+    <Path>GameObject/UI/Button</Path>
+    <ShortKeyName>#b</ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="70">
+    <Path>GameObject/UI/Panel</Path>
+    <ShortKeyName>#p</ShortKeyName>
+    <BlongTo>GameObject</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="71">
+    <Path>Window/Layouts/2 by 3</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>Window</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="72">
+    <Path>Window/Sprite Packer</Path>
+    <ShortKeyName>
+    </ShortKeyName>
+    <BlongTo>Window</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="73">
+    <Path>Window/Editor Tests Runner</Path>
+    <ShortKeyName>%#e</ShortKeyName>
+    <BlongTo>Window</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="74">
+    <Path>Window/Lighting</Path>
+    <ShortKeyName>#l</ShortKeyName>
+    <BlongTo>Window</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="75">
+    <Path>Help/Unity Manual</Path>
+    <ShortKeyName>#u</ShortKeyName>
+    <BlongTo>Help</BlongTo>
+  </ShortcutKeyItem>
+  <ShortcutKeyItem id="76">
+    <Path>Help/Scripting Reference</Path>
+    <ShortKeyName>#r</ShortKeyName>
+    <BlongTo>Help</BlongTo>
   </ShortcutKeyItem>
 </KeyData>
