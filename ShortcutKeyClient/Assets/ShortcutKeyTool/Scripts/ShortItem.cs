@@ -93,6 +93,11 @@ public class ShortItem
 		}
 	}
 
+	public bool EnableChange
+	{
+		get { return BlongTo == ShortType.Extension; }
+	}
+
 	public ShortItem():this(String.Empty, String.Empty)
 	{
 		

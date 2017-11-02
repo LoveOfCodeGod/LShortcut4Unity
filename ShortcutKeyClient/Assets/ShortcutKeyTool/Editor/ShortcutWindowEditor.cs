@@ -105,7 +105,7 @@ public class ShortcutWindowEditor : EditorWindow
 
 	void OnDestroy()
 	{
-		if (m_ShortKeyDict == null)
+		if (m_ShortKeyDict != null)
 		{
 			m_ShortKeyDict.Clear();
 			m_ShortKeyDict = null;
@@ -240,35 +240,47 @@ public class ShortcutWindowEditor : EditorWindow
 	{
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.LabelField("Path:",GUILayout.Width(45));
-//		if (codeItem.BlongTo == ShortType.Extension)
-			codeItem.Path = EditorGUILayout.TextField(codeItem.Path, GUILayout.Width(200));
-//		else
-//			EditorGUILayout.LabelField("",codeItem.Path,GUILayout.Width(200));
 		if (isOldFirst)
 		{
+			codeItem.Path = EditorGUILayout.TextField(codeItem.Path, GUILayout.Width(200));
 			EditorGUILayout.LabelField("ShortcutName:",GUILayout.Width(85));
 			codeItem.ShortKey = EditorGUILayout.TextField(codeItem.ShortKey, GUILayout.Width(85));
+			if (!isSystem && GUILayout.Button("delete",GUILayout.Width(70),GUILayout.Height(20)))
+			{
+				if (list.Contains(codeItem))
+				{
+					list.Remove(codeItem);
+				}
+			}
 		}
 		else
 		{
+			if (codeItem.BlongTo == ShortType.Extension)
+				codeItem.Path = EditorGUILayout.TextField(codeItem.Path, GUILayout.Width(200));
+			else
+				EditorGUILayout.LabelField("",codeItem.Path,GUILayout.Width(200));
 			GUILayout.Space(10);
+//			EditorGUILayout.BeginToggleGroup("√", codeItem.EnableChange);
+			EditorGUILayout.BeginHorizontal();
 			//辅助键
 			codeItem.AIDShift = EditorGUILayout.ToggleLeft("Shift", codeItem.AIDShift, GUILayout.Width(50));
 			codeItem.AIDCommand = EditorGUILayout.ToggleLeft("Command", codeItem.AIDCommand, GUILayout.Width(80));
 			codeItem.AIDCtrl = EditorGUILayout.ToggleLeft("Ctrl", codeItem.AIDCtrl, GUILayout.Width(50));
-			codeItem.AIDSingle = EditorGUILayout.ToggleLeft("Single", codeItem.AIDSingle, GUILayout.Width(50));
+			codeItem.AIDSingle = EditorGUILayout.ToggleLeft("Single", codeItem.AIDSingle, GUILayout.Width(70));
 			//热键
 			codeItem.KeySelectIndex = EditorGUILayout.Popup(codeItem.KeySelectIndex, popupKEYStr, GUILayout.Width(70));
 			//设置热键
 			codeItem.SetKey(ShortKeyCode.popupKEYDict[popupKEYStr[codeItem.KeySelectIndex]]);
 			GUILayout.Space(10);
-		}
-		if (!isSystem && GUILayout.Button("delete",GUILayout.Width(70),GUILayout.Height(20)))
-		{
-			if (list.Contains(codeItem))
+			if (!isSystem && GUILayout.Button("delete",GUILayout.Width(70),GUILayout.Height(20)))
 			{
-				list.Remove(codeItem);
+				if (list.Contains(codeItem))
+				{
+					list.Remove(codeItem);
+				}
 			}
+			EditorGUILayout.EndHorizontal();
+//			EditorGUILayout.EndToggleGroup();
 		}
 		EditorGUILayout.EndHorizontal();
 	}

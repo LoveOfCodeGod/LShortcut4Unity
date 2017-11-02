@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 public enum ShortType
 {
+    Extension,
     File,
     Edit,
     Assets,
     GameObject,
     Component,
     Window,
-    Help,
-    Extension
+    Help
 }
 
 public class ShortKeyCode
